@@ -112,7 +112,7 @@ resource "aws_instance" "Public-instances" {
     count = 1
     # count = "${var.environment == "prod" ? 3 : 1}"
     # ami = "${lookup(var.amis, var.aws_region, "us-east-1")}"
-    ami = "ami-053b0d53c279acc90"
+    ami = "${var.imagename}"
     # ami = "${data.aws_ami.my_ami.id}"
     availability_zone = "us-east-1a"
     instance_type = "t2.nano"
