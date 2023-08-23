@@ -35,6 +35,4 @@ variable "instance_type" {
     prod = "t2.medium"
     }
 }
-variable "imagename" {
- default = "${AMIID}"
-}
+
